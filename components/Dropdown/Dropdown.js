@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { runFunction } from "../../helpers/util";
 import style from "./Dropdown.module.scss";
 
 const Dropdown = ({ title = "Dropdown", list = [], onChange, loading }) => {
@@ -13,13 +14,10 @@ const Dropdown = ({ title = "Dropdown", list = [], onChange, loading }) => {
     e.preventDefault();
     lost();
     setSelected(false);
+    runFunction(onChange(""));
   };
 
   const widthSetup = `w-full max-w-md`;
-
-  useEffect(() => {
-    if (typeof onChange === "function") onChange(selected);
-  }, [selected, onChange]);
 
   useEffect(() => {
     if (!list || list.length < 1) setSelected(false);
@@ -60,6 +58,7 @@ const Dropdown = ({ title = "Dropdown", list = [], onChange, loading }) => {
               list.map((item) => {
                 const click = () => {
                   setSelected(item);
+                  runFunction(onChange(item));
                   lost();
                 };
                 return (

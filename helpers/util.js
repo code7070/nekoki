@@ -19,3 +19,8 @@ export const getTightDateTime = () => {
 
   return `${year}${monthNum}${dayNum}${hour}00`;
 };
+
+export const runFunction = (fn) => {
+  if (!fn) return false;
+  else if (typeof fn === "function") return fn();
+};

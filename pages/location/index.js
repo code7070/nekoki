@@ -30,21 +30,17 @@ export default function Location() {
   const provinceChange = (item) => {
     setSelProv(item);
 
-    if (!item) {
-      setCity(false);
-      setSelCity(false);
-      setDistrict(false);
-      setSelDis(false);
-    }
+    setCity(false);
+    setSelCity(false);
+    setDistrict(false);
+    setSelDis(false);
   };
 
   const cityChange = (item) => {
     setSelCity(item);
 
-    if (!item) {
-      setDistrict(false);
-      setSelDis(false);
-    }
+    setDistrict(false);
+    setSelDis(false);
   };
 
   const districtChange = (item) => {
