@@ -1,5 +1,4 @@
 import "@/styles/globals.css";
-import "@/styles/paw.scss";
 import type { AppProps } from "next/app";
 import { getCookie } from "cookies-next";
 import { useEffect } from "react";
