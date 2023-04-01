@@ -1,6 +1,6 @@
 export default function Profile() {
   return (
-    <div className="flex items-center w-full gap-4 p-4 bg-primary rounded-xl">
+    <div className="w-full gap-4 p-4 bg-primary neko-card ">
       <div>
         <div className="w-9 h-9 rounded-full bg-accent" />
       </div>

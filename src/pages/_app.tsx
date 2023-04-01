@@ -1,8 +1,11 @@
-import "@/styles/globals.css";
+import "@/styles/global.scss";
 import type { AppProps } from "next/app";
 import { getCookie } from "cookies-next";
+import { Balsamiq_Sans } from "next/font/google";
 import { useEffect } from "react";
 import Paw from "@/components/paw";
+
+const font = Balsamiq_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function App({ Component, pageProps }: AppProps) {
   const theme = getCookie("nekotheme");
@@ -13,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
   });
 
   return (
-    <main>
+    <main className={font.className}>
       <Component {...pageProps} />
       <Paw />
     </main>

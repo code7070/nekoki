@@ -18,3 +18,16 @@ body {
 .wrapper {
   @apply relative max-w-sm mx-auto my-10;
 }
+
+.neko-card {
+  @apply rounded-xl p-4 mb-4;
+  @apply flex items-center gap-2;
+
+  &.neko-wrapper {
+    @apply block p-0;
+
+    .neko-inner {
+      @apply p-5;
+    }
+  }
+}
