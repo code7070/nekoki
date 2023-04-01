@@ -15,19 +15,19 @@ export default function Paw() {
           <div className={style.pawWrapper}>
             <button
               className={style.pawFinger}
-              onClick={() => setThemer("retro")}
+              onClick={() => open && setThemer("retro")}
             />
             <button
               className={style.pawFinger}
-              onClick={() => setThemer("halloween")}
+              onClick={() => open && setThemer("halloween")}
             />
             <button
               className={style.pawFinger}
-              onClick={() => setThemer("cyberpunk")}
+              onClick={() => open && setThemer("cyberpunk")}
             />
             <button
               className={style.pawFinger}
-              onClick={() => setThemer("valentine")}
+              onClick={() => open && setThemer("valentine")}
             />
           </div>
           <div className={style.pawWrapper}>

@@ -1,0 +1,11 @@
+.recipe {
+  @apply p-2 rounded-xl bg-white;
+
+  .image {
+    @apply w-full h-[146px] bg-secondary mb-2.5 rounded-xl;
+  }
+
+  .title {
+    @apply text-sm line-clamp-2 font-bold mb-6;
+  }
+}

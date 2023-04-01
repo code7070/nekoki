@@ -16,7 +16,9 @@ body {
 }
 
 .wrapper {
-  @apply relative max-w-sm mx-auto my-10;
+  @apply relative w-full mx-auto my-10;
+  @apply max-w-sm md:max-w-md;
+  @apply px-2 md:px-0;
 }
 
 .neko-card {

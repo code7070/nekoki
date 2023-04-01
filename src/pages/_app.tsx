@@ -1,9 +1,10 @@
-import "@/styles/global.scss";
 import type { AppProps } from "next/app";
 import { getCookie } from "cookies-next";
 import { Balsamiq_Sans } from "next/font/google";
 import { useEffect } from "react";
 import Paw from "@/components/paw";
+import "@/styles/global.scss";
+import "swiper/css";
 
 const font = Balsamiq_Sans({ subsets: ["latin"], weight: ["400", "700"] });
 
