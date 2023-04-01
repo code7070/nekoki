@@ -1,6 +1,15 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { getCookie } from "cookies-next";
+import { Html, Head, Main, NextScript } from "next/document";
 
-export default function Document() {
+export function getServerSideProps() {
+  const theme = getCookie("nekotheme", { domain: "localhost", path: "/" });
+  return { props: { theme } };
+}
+
+export default function Document(props: any) {
+  let theme: any = "";
+  theme = getCookie("nekotheme", { domain: "localhost", path: "/" });
+
   return (
     <Html lang="en">
       <Head />
@@ -9,5 +18,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }
